@@ -5,10 +5,4 @@ class HomesController < ApplicationController
   def about
   end
   
-  def welcome
-  end
-  
-  def about
-  end
-  
 end
