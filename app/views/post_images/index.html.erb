@@ -1,2 +1,8 @@
-<h1>PostImages#index</h1>
-<p>Find me in app/views/post_images/index.html.erb</p>
+<% @post_images.each do |post_image| %>
+
+  <div>
+      <p><%= post_image.book_name %></p>
+      <p><%= post_image.caption %></p>
+  </div>
+  
+<% end %>
