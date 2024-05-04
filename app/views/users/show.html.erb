@@ -1,3 +1,5 @@
+<h2>User info</h2>
+
 <div>
     <h3><%= @user.name %></h3>
     <%= image_tag @user.get_profile_image(100,100) %>
@@ -10,6 +12,9 @@
     <p><%= post_image.book_name %></p>
     <p><%= post_image.caption %></p>
     <p><%= post_image.user.name %></p>
+    <%= link_to user_path do %>
+      <i class="fa-solid fa-user-gear"></i>
+    <% end %>
 </div>
 
 <% end %>
