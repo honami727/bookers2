@@ -3,6 +3,11 @@
 <div>
     <h3><%= @user.name %></h3>
     <%= image_tag @user.get_profile_image(100,100) %>
+      <% if @user == current_user %>
+        <%= link_to edit_user_path do %>
+          <i class="fa-solid fa-user-gear"></i>
+        <% end %>
+      <% end %>
 </div>
 
 <% @post_images.each do |post_image| %>
@@ -12,9 +17,6 @@
     <p><%= post_image.book_name %></p>
     <p><%= post_image.caption %></p>
     <p><%= post_image.user.name %></p>
-    <%= link_to user_path do %>
-      <i class="fa-solid fa-user-gear"></i>
-    <% end %>
 </div>
 
 <% end %>
