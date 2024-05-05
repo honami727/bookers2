@@ -1,12 +1,37 @@
 <body>
+    
+<h2>New book</h2>
+
+ <%= form_with model: @book do |f| %>
+
+ <form class="new_book" id="new_book" action="/books" accept-charset="UTF-8" method="post">
+
+  <div class="field">
+    <label for="book_title">Title</label>
+    <input class="book_title" type="text" name="book[title]" id="book_title">
+  </div>
+  
+  <div class="field">
+    <label for="book_body">Opinion</label>
+    <textarea class="book_body" name="book[body]" id="book_body"></textarea>
+  </div>
+  
+  <div class="actions">
+    <input type="submit" name="commit" value="Create Book" data-disable-with="Create Book">
+  </div>
+  
+ </form>
+  
+ <% end %>
 
 <h1>Users</h1>
 
 <table>
 　  <thead>
 　    <tr>
+　      <th>image</th>
 　      <th>name</th>
-　      <th colspan="2"></th>
+　      <th colspan="3"></th>
 　    </tr>
 　  </thead>
 　  
@@ -14,7 +39,9 @@
 　   <% @users.each do |user| %>
 　    
 　    <tr>
+　      <td><%= image_tag user.get_profile_image(100,100) %></td>
 　      <td><%= user.name %></td>
+　      <td><%= link_to 'Show', user_path(user.id) %></td>
 　    </tr>
 　   <% end %>
 　  </tbody>

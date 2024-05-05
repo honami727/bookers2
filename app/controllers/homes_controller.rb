@@ -4,6 +4,7 @@ class HomesController < ApplicationController
   
   def about
     @books = Book.all
+    @user = current_user
   end
   
 end
