@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'books/new'
   get '/books' => 'books#index'
   get 'books/:id' => 'books#show', as: 'book'
-  get 'books/edit'
+  get 'books/edit'  => 'books#edit'
   post 'books' => 'books#create'
   resources :post_images, only: [:new, :create, :index, :show]
   devise_for :users

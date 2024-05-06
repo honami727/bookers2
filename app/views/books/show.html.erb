@@ -1,5 +1,7 @@
 <body>
  
+ <%= render 'users/info', user: @user %>
+ 
  <h2>New book</h2>
 
  <%= form_with model: @book do |f| %>
@@ -26,15 +28,28 @@
     
     <h1>Book detail</h1>
     
-    <p>
-     <span>
-       <%= link_to @book.title, book_path(@book.id) %>
-     </span>
-    </p>
-    
-    <p>
-     <span><%= @book.body %></span>
-    </p>
+    <table>
+　  <thead>
+　    <tr>
+　      <th><%= link_to @book.title, book_path(@book.id) %></th>
+　      <th><%= @book.body %></th>
+　      <th colspan="3"></th>
+　    </tr>
+　  </thead>
+　  
+　  <tbody>
+　   <% @users.each do |user| %>
+　    
+　    <tr>
+　      <td><%= image_tag user.get_profile_image(100,100) %></td>
+　      <td><%= user.name %></td>
+　    </tr>
+　   <% end %>
+　  </tbody>
+　  
+　  
+　  
+　</table>
     
 </body>
 
