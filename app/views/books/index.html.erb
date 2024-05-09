@@ -1,34 +1,25 @@
 <body>
+ 
+
 <%= render 'users/info', user: @user %>
 
-<h2>New book</h2>
+<h1>New book</h1>
 
- <%= form_with model: @book do |f| %>
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
 
- <form class="new_book" id="new_book" action="/books" accept-charset="UTF-8" method="post">
+  <h4>Title</h4>
+  <%= f.text_field :title %>
 
-  <div class="field">
-    <label for="book_title">Title</label>
-    <input class="book_title" type="text" name="book[title]" id="book_title">
-  </div>
+  <h4>Opinion</h4>
+  <%= f.text_area :body %>
   
-  <div class="field">
-    <label for="book_body">Opinion</label>
-    <textarea class="book_body" name="book[body]" id="book_body"></textarea>
-  </div>
+  <%= f.submit 'Create Book' %>
   
-  <div class="actions">
-    <input type="submit" name="commit" value="Create Book" data-disable-with="Create Book">
-  </div>
-  
- </form>
-  
- <% end %>
+<% end %>
+ 
+ <h1>Books</h1>
 
-
-<h1>Books</h1>
-
-<table>
+ <table>
 　  <thead>
 　    <tr>
 　      <th>Title</th>
@@ -48,5 +39,4 @@
 　  </tbody>
 　  
 　</table>
-
 </body>
