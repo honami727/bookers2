@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @post_images = @user.post_images
     @books = @user.books
+    @book = Book.new
   end
 
   def edit
