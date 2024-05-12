@@ -13,3 +13,112 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-dark {
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-brand {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 16px;
+}
+
+.navbar-nav {
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+li {
+    display: list-item;
+    box-sizing: content-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+    text-align: left;
+    margin: 0;
+    color: #212529;
+}
+
+.p {
+    margin-top: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    display: block;
+}
+
+tbody {
+    display: table-row-group;
+    border-color: inherit;
+    vertical-align: middle;
+}
+
+tr {
+    display: table-row;
+    border-color: inherit;
+    vertical-align: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    display: table;
+    border-color: gray;
+    border-spacing: 2px;
+    text-indent: initial;
+}
+
+thead {
+    display: table-header-group;
+    border-color: inherit;
+    vertical-align: middle;
+}
+
+table th {
+    padding: 12px;
+}
+
+th {
+    display: table-cell;
+    font-weight: bold;
+}
+
+td {
+    padding: 12px;
+    border-top: 1px solid;
+    vertical-align: top;
+}
+
+footer {
+    display: block;
+}
