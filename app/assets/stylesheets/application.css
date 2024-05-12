@@ -81,6 +81,10 @@ h2 {
     margin-bottom: 80px;
 }
 
+h1 {
+    font-size: 40px;
+}
+
 tbody {
     display: table-row-group;
     border-color: inherit;
