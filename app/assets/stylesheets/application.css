@@ -66,6 +66,7 @@ body {
 }
 
 .p {
+    display: block;
     margin-top: 0;
 }
 
@@ -76,6 +77,8 @@ body {
 
 h2 {
     display: block;
+    font-size: 32px;
+    margin-bottom: 80px;
 }
 
 tbody {
@@ -98,6 +101,10 @@ table {
     text-indent: initial;
 }
 
+.table {
+    width: 16px;
+}
+
 thead {
     display: table-header-group;
     border-color: inherit;
@@ -113,6 +120,11 @@ th {
     font-weight: bold;
 }
 
+.table td {
+    padding: 12px;
+    border-top: 1px solid;
+}
+
 td {
     padding: 12px;
     border-top: 1px solid;
@@ -120,5 +132,9 @@ td {
 }
 
 footer {
+    display: block;
+}
+
+div {
     display: block;
 }
