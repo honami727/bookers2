@@ -9,6 +9,8 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to current_user
     else
+      @books = Book.all
+      @user = current_user
       render :"index"
     end
   end

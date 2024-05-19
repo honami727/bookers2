@@ -85,6 +85,10 @@ h1 {
     font-size: 40px;
 }
 
+h3 {
+    display: block;
+}
+
 tbody {
     display: table-row-group;
     border-color: inherit;
