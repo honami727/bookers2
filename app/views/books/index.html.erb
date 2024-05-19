@@ -10,19 +10,8 @@
         <div class="col-md-3">
         <%= render 'users/info', user: @user %>
 
-        <h2>New book</h2>
-
-          <%= form_with model: @book, url: '/books', method: :post do |f| %>
-
-            <h6>Title</h6>
-            <%= f.text_field :title %>
-
-            <h6>Opinion</h6>
-            <%= f.text_area :body %>
-  
-            <%= f.submit 'Create Book', class: 'btn btn-success' %>
-  
-          <% end %>
+        <%= render 'books/new', book: @book %>
+        
         </div>
  
        <div class="col-md-8 offset-md-1">

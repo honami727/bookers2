@@ -9,7 +9,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to current_user
     else
-      render :index
+      render :"index"
     end
   end
 
