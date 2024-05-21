@@ -16,7 +16,7 @@
   <body>
 
   <body class="d-flex flex-column vh-100">
-     <header class="shadow-sm">
+    <header class="shadow-sm">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
           <a class="navbar-brand">
@@ -64,6 +64,12 @@
       </nav>
     </header>
     
+    <main>
+      <%= flash[:notice] %>
+    </main>
+    
     <%= yield %>
   </body>
+  
+  
 </html>
