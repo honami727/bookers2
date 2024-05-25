@@ -44,6 +44,7 @@
               </li>
             <% else %>
               <li>
+                <i class="fa-solid fa-house" style="color: white;"></i>
                 <%= link_to "Home", destroy_user_session_path, method: :delete %>
               </li>
               <li>
@@ -55,7 +56,7 @@
                 <%= link_to "Sign up", new_user_registration_path, :style=>"color:white;" %>
               </li>
               <li>
-                <i class="fa-solid fa-right-to bracket" style="color: white;"></i>
+                <i class="fa-solid fa-right-to-bracket" style="color: white;"></i>
                 <%= link_to "Log in", new_user_session_path, :style=>"color:white;" %>
               </li>
             <% end %>
